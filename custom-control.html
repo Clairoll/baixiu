@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>控制自定义属性样式</title>
+	<style>
+		.checkbox1{
+			display: none;
+		}
+		.checkbox1+i{
+			font-style: normal;
+		}
+		.checkbox1+i::after{
+			content: '☆';
+		}
+		.checkbox1:checked+i::after{
+			content: '★';
+		}
+
+
+	</style>
+</head>
+<body>
+	<label>
+		<input type="checkbox" class="checkbox1">
+		<i></i>
+	</label>
+</body>
+</html>
